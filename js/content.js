@@ -118,9 +118,9 @@ $(function() {
     }); */
 
     $(".highlight").css("background-color", "#FF96C2");
-    $(".highlight").css("font-size", "30px");
-    $(".highlight").css("border-radius", "25px");
-    $(".highlight").css("padding", "10px");
+    $(".highlight").css("font-size", "30px !important");
+    $(".highlight").css("border-radius", "25px !important");
+    $(".highlight").css("padding", "10px !important");
 
 
     autoReload.then(function (value) {
