@@ -1,12 +1,10 @@
-# Word Highlighter
+# Destacando expressões
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1c22e8796f7743e0bece4694ed33c7e1)](https://www.codacy.com/app/rafaelcpalmeida/Word-Highlighter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rafaelcpalmeida/Word-Highlighter&amp;utm_campaign=Badge_Grade) [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ncjaameocjfjjnjcijikhkhifncjijhn.svg)](https://chrome.google.com/webstore/detail/word-highlighter/ncjaameocjfjjnjcijikhkhifncjijhn) [![Chrome Web Store](https://img.shields.io/chrome-web-store/d/ncjaameocjfjjnjcijikhkhifncjijhn.svg)](https://chrome.google.com/webstore/detail/word-highlighter/ncjaameocjfjjnjcijikhkhifncjijhn) [![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/ncjaameocjfjjnjcijikhkhifncjijhn.svg)](https://chrome.google.com/webstore/detail/word-highlighter/ncjaameocjfjjnjcijikhkhifncjijhn)
+Esse é um teste de extensão do chrome que destaca as palavras a extensões desejadas.
 
-[![Buy Me a Coffee at ko-fi.com](https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f)](https://ko-fi.com/A606KD0)
+Projeto criado por @eliseguimaraes e Fernanda Souza.
 
-This is a small Google Chrome extension that allows you to add words or expressions to a list to be later, automatically, highlighted as you browse the Web.
-
-# Instructions
+# História por trás do projeto
 - Install the extension
 - Highlight the word or expression that you want to add
 

@@ -77,9 +77,7 @@ autoReload = new Promise(function (resolve, reject) {
 function getWordList() {
     var words = [];
 
-    $(".wordList li").each(function (index, element) {
-        words.push(element.textContent.trim());
-    });
+    words = ["Fernanda", "projeto", "história"];
 
     return words;
 }
@@ -111,13 +109,16 @@ $(function() {
         console.log("Handle rejected promise (" + reason + ") here.");
     });
 
-    highlightColor.then(function (item) {
+    /* highlightColor.then(function (item) {
         if(item.color) {
             $(".jscolor").val(item.color);
             var color = (item.color.startsWith("#")) ? item.color : "#" + item.color ;
             $(".highlight").css("background-color", color);
         }
-    });
+    }); */
+
+    $(".highlight").css("background-color", "#FF96C2");
+    $(".highlight").css("font-family", "Gilroy, Roboto, sans-serif");
 
     autoReload.then(function (value) {
         if(value.autoReload) {
