@@ -1,8 +1,8 @@
 # Destacando expressões
 
 Esse é um teste de extensão do chrome que destaca as palavras a extensões desejadas.
-
 Projeto criado por @eliseguimaraes e Fernanda Souza.
+
 
 # História por trás do projeto
 - Install the extension
