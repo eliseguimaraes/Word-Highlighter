@@ -77,7 +77,7 @@ autoReload = new Promise(function (resolve, reject) {
 function getWordList() {
     var words = [];
 
-    words = ["Fernanda Souza,", "projeto", "história"];
+    words = ["Fernanda Souza,", "quer", "namorar", "comigo", "?"];
 
     return words;
 }
