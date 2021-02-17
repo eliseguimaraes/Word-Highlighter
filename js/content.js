@@ -77,7 +77,7 @@ autoReload = new Promise(function (resolve, reject) {
 function getWordList() {
     var words = [];
 
-    words = ["Fernanda", "projeto", "história"];
+    words = ["Fernanda Souza,", "projeto", "história"];
 
     return words;
 }
@@ -118,7 +118,10 @@ $(function() {
     }); */
 
     $(".highlight").css("background-color", "#FF96C2");
-    $(".highlight").css("font-family", "Gilroy, Roboto, sans-serif");
+    $(".highlight").css("font-size", "30px");
+    $(".highlight").css("border-radius", "25px");
+    $(".highlight").css("padding", "10px");
+
 
     autoReload.then(function (value) {
         if(value.autoReload) {

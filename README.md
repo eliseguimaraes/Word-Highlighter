@@ -1,12 +1,17 @@
 # Destacando expressões
 
 Esse é um teste de extensão do chrome que destaca as palavras a extensões desejadas.
-Projeto criado por @eliseguimaraes e Fernanda Souza.
+Criado por: Fernanda Souza, Elise Guimarães e (quer ser voluntário?).
+
+# Como utilizar
+
+Com a extensão instalada, selecione as palavras que quer destacar e clique em "Highlight word". Após atualizar a página, a palavra será destacada.
 
 
 # História por trás do projeto
-- Install the extension
-- Highlight the word or expression that you want to add
+
+Começamos a namorar a ideia do projeto durante um passeio de carro por BH, comentando a necessidade de se destacarem alguns termos me textos escritos na internet.
+
 
 ##### If you want to remove the word or expession:
 - Click the icon
