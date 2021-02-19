@@ -21,7 +21,6 @@ function applyReplacementRule(node) {
                             // Use `` instead of '' or "" if you want to use ${variable} inside a string
                             // For more information visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
                             highlightColor.then(function (item) {
-                                var color = (item.color.startsWith("#")) ? item.color : "#" + item.color ;
                                 var replacedText = node.innerHTML.replace(new RegExp(`(${replacement})`, "i"), `<span style="border-radius: 25px;
                                 background-color: #FF96C2;
                                 font-size: 30px;
