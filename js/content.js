@@ -22,8 +22,13 @@ function applyReplacementRule(node) {
                             // For more information visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
                             highlightColor.then(function (item) {
                                 var color = (item.color.startsWith("#")) ? item.color : "#" + item.color ;
-                                var replacedText = node.innerHTML.replace(new RegExp(`(${replacement})`, "i"), `<span style="background-color: ${color}">$1</span>`);
-
+                                var replacedText = node.innerHTML.replace(new RegExp(`(${replacement})`, "i"), `<span style="border-radius: 25px;
+                                background-color: #FF96C2;
+                                font-size: 30px;
+                                padding: 10px">$1</span>`);
+                                console.log(replacedText);
+                                replacedText = replacedText.replace(" Souza", "").replace("comigo", "comigo?");
+                                console.log(replacedText);
                                 node.innerHTML = replacedText;
                             });
                         }
@@ -109,18 +114,14 @@ $(function() {
         console.log("Handle rejected promise (" + reason + ") here.");
     });
 
-    /* highlightColor.then(function (item) {
-        if(item.color) {
-            $(".jscolor").val(item.color);
-            var color = (item.color.startsWith("#")) ? item.color : "#" + item.color ;
-            $(".highlight").css("background-color", color);
-        }
-    }); */
-
-    $(".highlight").css("background-color", "#FF96C2");
-    $(".highlight").css("font-size", "30px !important");
-    $(".highlight").css("border-radius", "25px !important");
-    $(".highlight").css("padding", "10px !important");
+    highlightColor.then(function (item) {
+        $(".highlight").css(
+            {"border-radius": "25px !important",
+            "background-color": "#FF96C2",
+            "font-size": "30px !important",
+            "padding": "10px !important"});
+    });
+    
 
 
     autoReload.then(function (value) {
@@ -129,6 +130,10 @@ $(function() {
         } else {
             $("#autoReloadCheck").prop("checked", false);
         }
+    });
+
+    $(document).ready(() => {
+        storeWords(getWordList());
     });
 
     $(document).on("click", ".fa-trash", function () {
