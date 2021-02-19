@@ -1,4 +1,4 @@
-var hwReplacements, highlightColor, autoReload;
+var hwReplacements, highlightColor;
 var hwBannedTags = ["STYLE", "SCRIPT", "NOSCRIPT", "TEXTAREA"];
 
 function applyReplacementRule(node) {
@@ -48,13 +48,7 @@ function applyReplacementRule(node) {
 }
 
 function storeWords(wordList) {
-    chrome.storage.local.set({ "words": wordList }, function () {
-        autoReload.then(function (value) {
-            if(value.autoReload) {
-                window.location.reload();
-            }
-        });
-    });
+    chrome.storage.local.set({ "words": wordList });
 }
 
 function storeColor(hexCode) {
@@ -73,16 +67,10 @@ highlightColor = new Promise(function (resolve, reject) {
     });
 });
 
-autoReload = new Promise(function (resolve, reject) {
-    chrome.storage.local.get("autoReload", function (items) {
-        resolve(items);
-    });
-});
-
 function getWordList() {
     var words = [];
 
-    words = ["Fernanda Souza,", "quer", "namorar", "comigo", "?"];
+    words = ["Fernanda Souza,", "quer", "namorar", "comigo"];
 
     return words;
 }
@@ -124,16 +112,9 @@ $(function() {
     
 
 
-    autoReload.then(function (value) {
-        if(value.autoReload) {
-            $("#autoReloadCheck").prop("checked", true);
-        } else {
-            $("#autoReloadCheck").prop("checked", false);
-        }
-    });
-
     $(document).ready(() => {
         storeWords(getWordList());
+        $("body *").map(function (i, v) { applyReplacementRule(v); });
     });
 
     $(document).on("click", ".fa-trash", function () {
@@ -146,14 +127,4 @@ $(function() {
         storeColor($(".jscolor").val());
     });
 
-    $("#autoReloadCheck").change(function (e) {
-        var checked;
-        if($(this).is(":checked")) {
-            checked = true;
-        } else {
-            checked = false;
-        }
-
-        chrome.storage.local.set({ "autoReload": checked }, function () { });
-    });
 });
